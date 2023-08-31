@@ -1,0 +1,89 @@
+@font-face {
+  font-family: "ratfont"; /* Choose a name for your font family */
+  src: url("./Montserrat-VariableFont_wght.ttf") format("truetype");
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  position: relative;
+}
+
+h1 {
+  /* need to do this because of browser default styles */
+  margin: 0;
+
+  position: absolute;
+  font-size: 75px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 200;
+  padding-top: 28px;
+  line-height: 5.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  max-width: 830px;
+  margin: 0px auto;
+  padding-top: 75px;
+  padding-inline: 30px;
+  gap: 30px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 230px;
+}
+.card img {
+  height: 325px;
+  object-fit: cover;
+  width: 100%;
+}
+.card h2 {
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.card p,
+.card a {
+  font-family: "ratfont";
+}
+.card p {
+  font-size: 0.9rem;
+}
+.card a {
+  font-size: 0.7rem;
+  color: gray;
+  font-weight: 700;
+}
+.card p {
+  line-height: 1.3rem;
+}
+
+div.card:nth-of-type(2) {
+  /* Your styles here */
+  margin-top: 100px;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 37.5px;
+    line-height: 2.5rem;
+    position: relative;
+  }
+  main {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0%;
+    padding-bottom: 5rem;
+  }
+
+  div.card:nth-of-type(2) {
+    /* Your styles here */
+    margin-top: 0px;
+  }
+}
